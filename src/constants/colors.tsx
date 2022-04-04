@@ -1,0 +1,2 @@
+export const DEFAULT_BACKGROUND_COLOR = '#342D42';
+export const DEFAULT_TEXT_ICON_COLOR = '#F15562';

@@ -1,8 +1,8 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Root from 'src/screens/Root';
-import Main from 'src/screens/Home';
+import Root from '../screens/Root';
+import Main from '../screens/Home';
 
 const appNavigator = createStackNavigator({
   Root: {

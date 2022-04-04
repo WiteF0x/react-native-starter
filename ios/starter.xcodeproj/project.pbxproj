@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		40FBF8F6BD6F6156F74BC7CD /* libPods-starter-starterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D73A0BEE235602EB409C45 /* libPods-starter-starterTests.a */; };
+		41D944AD27FB15A5004B94C0 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D944AC27FB15A5004B94C0 /* Swift.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C9853D9BB6EC5A9631180C2E /* libPods-starter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4414B1E126A33A569764223 /* libPods-starter.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,8 @@
 		411AF683268DE8AA00F59C0A /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		411AF684268DE8AA00F59C0A /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
 		411AF685268DE8AA00F59C0A /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		41D944AB27FB15A4004B94C0 /* starter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "starter-Bridging-Header.h"; sourceTree = "<group>"; };
+		41D944AC27FB15A5004B94C0 /* Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
 		447D4D755A49023E1A7EC01A /* Pods-starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starter.debug.xcconfig"; path = "Target Support Files/Pods-starter/Pods-starter.debug.xcconfig"; sourceTree = "<group>"; };
 		7699C1E40F49DCB06D6B02BE /* Pods-starter-starterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starter-starterTests.debug.xcconfig"; path = "Target Support Files/Pods-starter-starterTests/Pods-starter-starterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = starter/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				41D944AC27FB15A5004B94C0 /* Swift.swift */,
 				411AF679268DE8AA00F59C0A /* AntDesign.ttf */,
 				411AF681268DE8AA00F59C0A /* Entypo.ttf */,
 				411AF67D268DE8AA00F59C0A /* EvilIcons.ttf */,
@@ -154,6 +158,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				95B279647E94DEB5919675BD /* Pods */,
+				41D944AB27FB15A4004B94C0 /* starter-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -239,7 +244,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -443,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				41D944AD27FB15A5004B94C0 /* Swift.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7699C1E40F49DCB06D6B02BE /* Pods-starter-starterTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -489,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36A91F377D635ECDDB8D72F7 /* Pods-starter-starterTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = starterTests/Info.plist;
@@ -516,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B4WJ36K92W;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = starter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = starter;
+				SWIFT_OBJC_BRIDGING_HEADER = "starter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -542,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B4WJ36K92W;
 				INFOPLIST_FILE = starter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,6 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = starter;
+				SWIFT_OBJC_BRIDGING_HEADER = "starter-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

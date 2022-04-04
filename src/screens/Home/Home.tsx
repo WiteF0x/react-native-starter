@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import * as COLORS from '../../constants/colors';
+
 import styles from './styles';
 
 const Home = ({ count, reset, inc, dec }) => {
@@ -15,16 +17,16 @@ const Home = ({ count, reset, inc, dec }) => {
   const refresh = useRef(new Animated.Value(0)).current;
   const add = useRef(new Animated.Value(0)).current;
 
-  const animate = (value) => Animated.timing(value, { toValue: value?._value === 1 ? 0 : 1, duration: value?._value === 1 ? 1 : 250 }).start();
-
+  const animate = (value) => Animated.timing(value, { toValue: 1, duration: 500 }).start();
+  
   const funcWrapper = (func, value) => {
     func();
     startAnimation(value);
   };
 
   const startAnimation = (value) => {
+    value.setValue(0);
     animate(value);
-    setTimeout(() => animate(value), 250);
   };
 
   const button = (func, icon, value) => (
@@ -34,7 +36,7 @@ const Home = ({ count, reset, inc, dec }) => {
         hitSlop={{ top: 15, right: 15, bottom: 15, left: 15 }}
         onPress={func}
       >
-        <Icon name={icon} size={40} color='#F15562'/>
+        <Icon name={icon} size={40} color={COLORS.DEFAULT_TEXT_ICON_COLOR}/>
       </TouchableOpacity>
     </Animated.View>
   );
